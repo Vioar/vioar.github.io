@@ -1,0 +1,23 @@
+body {
+  background-color: grey;
+}
+
+button {
+  background-color: grey;
+  font-family: Courier;
+  color: white;
+  font-size: 20px;
+}
+
+p, h2 {
+  background-color: grey;
+  font-family: Courier;
+  text-align: center;
+}
+
+h3 {
+  background-color: grey;
+  font-family: Courier;
+  color: white;
+  text-align: center;
+}
