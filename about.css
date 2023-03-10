@@ -1,16 +1,17 @@
 body {
-  background-color: grey;
+  background-color: rgb(0, 0, 255);
 }
 
 button {
-  background-color: grey;
+  background-color: rgb(0, 0, 255);
   font-family: Courier;
   color: white;
   font-size: 20px;
 }
 
 p, h2 {
-  background-color: grey;
+  background-color: rgb(0, 0, 255);
   font-family: Courier;
+  color: red;
   text-align: center;
 }
