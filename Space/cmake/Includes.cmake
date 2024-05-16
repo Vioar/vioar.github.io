@@ -1,3 +1,0 @@
-set(INCLUDE
-	app/include
-)
