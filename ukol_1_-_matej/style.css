@@ -1,6 +1,5 @@
 html {
     text-align: center;
-    background-color: yellow;
 }
 
 h1 {
@@ -12,4 +11,11 @@ button {
     font-size: 15px;
     padding: 5px;
     background-color: yellow;
+}
+
+header {
+    background-color: #005f99;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
