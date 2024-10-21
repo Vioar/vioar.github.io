@@ -1,14 +1,24 @@
 body {
 	background-color: blue;
-	padding: 1%;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+body::-webkit-scrollbar {
+	display: none;
 }
 
 a {
 	text-decoration: none;
 }
 
-.menu {
+header h1 {
+	color: blue;
+	border-radius: 5px;
+}
+
+header {
   	background-color: lightblue;
 	padding: 10px;
 	border-radius: 10px;	
@@ -18,14 +28,13 @@ a {
 	border-width: 5px;
 	margin: 0;
 	height: 100%;
-	overflow: hidden
 }
 
-.menu a {
+header a {
 	text-decoration: none;
 }
 
-.menu button {
+header button {
 	width: 20%;
     padding: 10px;
     background-color: blue;
@@ -38,7 +47,7 @@ a {
 	font-size: 24px;
 }
 
-.menu button:hover {
+header button:hover {
 	background-color: rgb(47, 47, 255);
 	box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
@@ -83,7 +92,7 @@ a {
 }
 
 .content_center {
-	width: 45%;
+	width: 90%;
 	background-color: rgb(109, 109, 255);
 	border-radius: 10px;
 	border-style: solid;
@@ -91,7 +100,7 @@ a {
 	border-width: 5px;
 	text-align: center;
 	color: white;
-	margin:auto;
+	margin: auto;
 }
 
 .content_center img {
@@ -99,8 +108,15 @@ a {
 	padding: 10px;
 }
 
-.content_center {
-	width: 100%;
+.content_center button {
+	background-color: black;
+	color: white;
+	border-radius: 100%;
+	padding: 5px;
+}
+
+footer {
+	width: 90%;
 	background-color: rgb(109, 109, 255);
 	border-radius: 10px;
 	border-style: solid;
@@ -108,10 +124,29 @@ a {
 	border-width: 5px;
 	text-align: center;
 	color: white;
-	margin:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.content_center img {
+footer button {
 	border-radius: 100%;
-	padding: 10px;
+	padding: 5px;
+	background-color: black;
+	color: white;
+}
+
+.content_center input {
+	background-color: rgb(109, 109, 255);
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 5px;
+}
+
+.content_center textarea {
+	background-color: rgb(109, 109, 255);
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 5px;
 }
