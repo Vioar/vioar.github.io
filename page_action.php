@@ -9,17 +9,16 @@ mb_internal_encoding("UTF-8");
 $hlaska = '';
 if ($_POST) { // V poli _POST něco je, odeslal se formulář
 	if (
-		isset($_POST['jmeno']) && $_POST['jmeno'] &&
-		isset($_POST['email']) && $_POST['email'] &&
-		isset($_POST['zprava']) && $_POST['zprava'] &&
-		isset($_POST['rok']) && $_POST['rok'] == date('Y')
+		isset($_POST['name']) && $_POST['name'] &&
+		isset($_POST['mail']) && $_POST['mail'] &&
+		isset($_POST['reason']) && $_POST['reason']
 	) {
-		$hlavicka = 'From:' . $_POST['email'];
+		$hlavicka = 'From:' . $_POST['mail'];
 		$hlavicka .= "\nMIME-Version: 1.0\n";
 		$hlavicka .= "Content-Type: text/html; charset=\"utf-8\"\n";
-		$adresa = 'vas@email.cz';
+		$adresa = 'beranekv@gchd.cz';
 		$predmet = 'Nová zpráva z mailformu';
-		$uspech = mb_send_mail($adresa, $predmet, $_POST['zprava'], $hlavicka);
+		$uspech = mb_send_mail($adresa, $predmet, $_POST['reason'], $hlavicka);
 		if ($uspech) {
 			$hlaska = 'Email byl úspěšně odeslán, brzy vám odpovíme.';
 		} else
@@ -46,25 +45,23 @@ if ($_POST) { // V poli _POST něco je, odeslal se formulář
 		echo ('<p>' . $hlaska . '</p>');
 	?>
 
-	<form method="POST">
-		<table>
-			<tr>
-				<td>Vaše jméno</td>
-				<td><input name="jmeno" type="text" /></td>
-			</tr>
-			<tr>
-				<td>Váš email</td>
-				<td><input name="email" type="email" /></td>
-			</tr>
-			<tr>
-				<td>Aktuální rok</td>
-				<td><input name="rok" type="number" /></td>
-			</tr>
-		</table>
-		<textarea name="zprava"></textarea><br />
-
-		<input type="submit" value="Odeslat" />
-	</form>
+	<form action="page_action.php">
+        <label><u><b>Blame me</b></u></label>
+        <br>
+        <label for="name">Your name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="mail">Your e-mail:</label>
+        <br>
+        <input type="email" id="mail" name="mail">
+        <br>
+        <label for="reason">What do you not like about my website?</label>
+        <br>
+        <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 
