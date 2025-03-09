@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+
+<link rel="stylesheet" href="ext/bootstrap.min.css">
+<link rel="stylesheet" href="ext/vis.css">
+<link rel="stylesheet" href="default.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="scrabblex.js"></script>
+
+
+<head>
+      <meta charset="utf-8">
+      <meta name='robots' content='index,follow'>
+      <meta name='googlebot' content='index,follow,snippet,archive'>
+      <meta name='description' content='Scrabblový slovník sestavený podle oficiálních pravidel. Online ověření platnosti slov délky 2-9 písmen (více než 1,2miliónu slovních tvarů). Další pomůcky pro scrabble: Descrambler, Bingotrenér.'>
+      <meta name='keywords' content='Scrabble,Deskové hry,Slovník,Lexikon,Český,Online,Descrambler,Bingo'>
+      <meta name='category' content='Sports and games'>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Český online scrabble slovník Scrabblex</title>
+  </head>
+<body>
+<div class="container-fluid" style="width:82%;background:white;padding-top:15px;padding-bottom:15px">
+
+
+<nav class="navbar navbar-inverse">
+
+<div class="container-fluid">
+
+<div class="navbar-header">
+
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+    <span class="icon-bar"></span>
+
+    <span class="icon-bar"></span>
+
+    <span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand" href="scrabblex.html">Scrabblex<sup>beta</sup></a>
+
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">O nás
+
+          <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="scrabblex.html">Popis stránek</a></li>
+
+            <li><a href="scrabblex.html">Novinky</a></li>
+
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hra
+
+          <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="https://hrej.scrabblex.cz" target="_blank">Hra proti počítači online</a></li>
+            <li><a href="scrabblex.html">Bingotrenér</a></li>
+
+          </ul>
+
+        </li>
+
+        <li class="dropdown active">
+
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Slovník
+
+          <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="scrabblex.html">Scrabblex 2-9</a></li>
+            <li><a href="scrabblex.html">Descrambler 2-9</a></li>
+
+          </ul>
+
+        </li>
+
+        <li class="dropdown">
+
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Scrabble obecně
+
+          <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="pravidla_scrabblex.html">Obecná pravidla hry</a></li>
+
+            <li><a href="pravidla_scrabblex.html">Pravidla přípustnosti slov</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Partie z MČR
+          <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="scrabblex.html">Seznam partií k přehrání</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="scrabblex.html"><span class="glyphicon glyphicon-user"></span> Registrace</a></li>
+
+
+        <li><a href="scrabblex.html"><span class="glyphicon glyphicon-log-in"></span> Přihlášení</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="row">
+ <div class="col-xs-12">
+	<div class="box2">
+	<div align="center"><b>Zadej slovo</b></div>
+
+	<p>
+	<form onsubmit="scrabblex(event)">
+    <div align="center">
+        <input type="text" name="slovo" value="" autofocus>
+    </div>
+    <p>
+    <div align="center">
+        <input type="submit" value="Zkontroluj slovo">
+    </div>
+</form>
+
+
+
+
+	</div>
+
+
+<table id="Table" class="table table-striped table-bordered reduced"
+       style="width:85%;max-width:400px;margin:auto auto;text-align:center;font-weight:bold; display:none;" id="Table"><caption style="text-align:center">Výsledek kontroly</caption><thead><th style="text-align:center">Kontrolované slovo</th><th style="text-align:center">Platnost Plus</th><th style="text-align:center">Platnost Klasik</th></thead><tbody><tr><td id="text"></td><td><img style="border: none" src="images/check.png" width="16" height="16" alt="cross"></td><td><img style="border: none" src="images/check.png" width="16" height="16" alt="cross"></td></tr></tbody></table>
+
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+<div class="divider1"></div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+Scrabblex 2-9<sup></sup> je slovník ověřující platnost slov v českém scrabble. Slovník je vytvořen podle oficiálních pravidel přípustnosti slov. Slovník ověřuje slova ve variantě PLUS i KLASIK.
+<p></p>V současné chvíli je slovník v testovacím provozu. Slova do 6 písmen lze ověřovat bez omezení. Delší slova mohou ověřovat pouze registrovaní uživatelé v rámci denního limitu 100 dotazů.
+<p></p>
+ </div>
+ <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+
+
+			<div class="box-black">
+				<h4>Novinka!</h4>
+				<div class="contentarea">
+
+					<p>Hra proti počítači <a href="https://hrej.scrabblex.cz" target="_blank">online</a>
+
+				</div>
+			</div>
+
+			<div class="box">
+				<h4>Kontakt</h4>
+				<div class="contentarea">
+
+					<p>E-mail: <a href="mailto:scrabblex@seznam.cz">scrabblex@seznam.cz</a>
+					<p><a href="http://www.toplist.cz/" target="_top"><img src="http://toplist.cz/count.asp?id=1684892&logo=mc" alt="TOPlist" width="88" height="60" vspace="3" border="0"/></a>
+					<p>
+
+				</div>
+			</div>
+
+			<div class="box">
+				<h4>Odkazy</h4>
+				<div class="contentarea">
+
+					<p>Scrabblová asociace <a href="http://scrabble.hrejsi.cz">ČAS</a>
+					<p>Internetová scrabble <a href="http://s.ik.cz">herna</a>
+					<p>Scrabble <a href="http://www.kanovsky.cz/scrabbleonline">herna</a> Petra Kaňovského
+				</div>
+			</div>
+
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+<div class="divider1"></div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+
+	<div id="footer">
+			<div class="left">&copy; 2015 scrabblex.cz. Všechna práva vyhrazena.</div>
+	</div>
+
+ </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body
+{
+    background: #000000 url('images/bg1.jpg');
+    padding: 35px 0px 35px 0px;
+}
+
+.box
+{
+    position: relative;
+    background: #FDFCF6 url('images/boxbg.gif') repeat-x;
+    padding: 10px;
+    border-bottom: solid 1px #E1D2BD;
+    margin-bottom: 1.0em;
+}
+
+.box-black
+{
+    position: relative;
+    background-color: #666666;
+    color: white;
+    padding: 10px;
+    border-bottom: solid 1px #E1D2BD;
+    margin-bottom: 1.0em;
+}
+
+.box-black a:link{color: #CCCCCC;}
+.box-black a:visited{color: #EEEEEE;}
+.box-black a:hover{color: #EEEEEE;}
+.box-black a:active{color: #EEEEEE;}
+
+.box2
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em;
+    background: #FDFCF6 url('images/boxbg.gif') repeat-x;
+    padding: 1.5em;
+    border-bottom: solid 1px #E1D2BD;
+    margin-bottom: 1.0em;
+}
+
+.divider1
+{
+    position: relative;
+    background: #fff url('images/border2.gif') repeat-x;
+    height: 14px;
+    margin: 10px 0px 30px 0px;
+    clear: both;
+}
+
+#footer
+{
+    position: relative;
+    height: 2.0em;
+    clear: both;
+    font-size: 0.8em;
+}
+
+#footer .left
+{
+    position: absolute;
+    left: 2.0em;
+    bottom: 1.2em;
+}
+
+#footer .right
+{
+    position: absolute;
+    right: 2.0em;
+    bottom: 1.2em;
+}
+
+@media screen and (max-width: 360px) {
+    .reduced{
+        font-size:10px;
+    }
+}
